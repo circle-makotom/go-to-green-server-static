@@ -1,0 +1,15 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: node:current-alpine
+    steps:
+      - run: echo "Hello world!"
+
+workflows:
+  version: 2
+
+  run:
+    jobs:
+      - build
